@@ -4,7 +4,7 @@ import java.io.InputStreamReader;
 
 public class N2562 {
     public static void main(String[] args) throws IOException {
-            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
             int bignumber = 0, bigposition = 0;
             for(int i = 0; i < 9; i++) {
