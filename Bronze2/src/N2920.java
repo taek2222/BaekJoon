@@ -18,6 +18,8 @@ public class N2920 {
                 Down++;
             a = b;
         }
+
+
         if(Up == 7)
             System.out.println("ascending");
         else if(Down == 7)
