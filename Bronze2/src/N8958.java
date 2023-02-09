@@ -8,17 +8,22 @@ public class N8958 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int loop = Integer.parseInt(br.readLine());
+        int total = 0, win = 0;
 
-        for(int i = 0, total = 0; i < loop; i++) {
+        for(int i = 0; i < loop; i++) {
             StringTokenizer str = new StringTokenizer(br.readLine());
             String[] strarry = str.nextToken().split("");
-            for (int j = 0; j < 10; j++) {
-                //if(strarry[j] == "O")
-                    //total++;
-                System.out.print(strarry[j]);
+
+            for (String OX : strarry) {
+                if(OX.equals("O")) {
+                    win++;
+                    total += win;
+                }
+                else if(OX.equals("X"))
+                    win = 0;
             }
             System.out.println(total);
-            total = 0;
+            total = 0; win = 0;
         }
     }
 
