@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/BaekJoon.iml" filepath="$PROJECT_DIR$/BaekJoon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Bronze1/Bronze1.iml" filepath="$PROJECT_DIR$/Bronze1/Bronze1.iml" />
       <module fileurl="file://$PROJECT_DIR$/Bronze2/Bronze2.iml" filepath="$PROJECT_DIR$/Bronze2/Bronze2.iml" />
       <module fileurl="file://$PROJECT_DIR$/Bronze3/Bronze3.iml" filepath="$PROJECT_DIR$/Bronze3/Bronze3.iml" />
       <module fileurl="file://$PROJECT_DIR$/Bronze4/Bronze4.iml" filepath="$PROJECT_DIR$/Bronze4/Bronze4.iml" />
