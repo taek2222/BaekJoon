@@ -8,6 +8,7 @@ public class N2675 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int num = Integer.parseInt(br.readLine());
+
         StringTokenizer str;
         int loop;
         String[] en;
@@ -17,10 +18,11 @@ public class N2675 {
             str = new StringTokenizer(br.readLine());
             loop = Integer.parseInt(str.nextToken());
             en = str.nextToken().split("");
-            for(int j = 0; j < en.length; j++)
-                for(int k = 0; k < loop; k++)
-                    System.out.print(en[j]);
+            for (String s : en)
+                for (int k = 0; k < loop; k++)
+                    System.out.print(s);
             System.out.println();
+
         }
     }
 }
