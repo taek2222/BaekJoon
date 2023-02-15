@@ -22,7 +22,5 @@ public class N2908 {
             restive = 0;
         }
         System.out.println(Math.max(numberarray[0], numberarray[1]));
-
-
     }
 }
