@@ -20,14 +20,15 @@ public class N2798 {
         for(int i = 0; i < number.length - 2; i++) {
             int total = number[i];
 
-            for(int j = i + 1; j < number.length - 2; j++) {
+            for(int j = i + 1; j < number.length - 1; j++) {
                 int total2 = total + number[j];
 
                 for(int k = j + 1; k < number.length; k++) {
                     int total3 = total2 + number[k];
                     if(total3 <= Max)
-                        if(Max - Min >= Max - total3)
+                        if(Max - Min >= Max - total3) {
                             Min = total3;
+                        }
                 }
             }
         }
