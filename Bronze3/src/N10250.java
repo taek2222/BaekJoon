@@ -12,10 +12,12 @@ public class N10250 {
         for (int i = 0; i < test; i++) {
             StringTokenizer HWN = new StringTokenizer(br.readLine());
             int H = Integer.parseInt(HWN.nextToken());
-            int W = Integer.parseInt(HWN.nextToken());
             int N = Integer.parseInt(HWN.nextToken());
 
-            System.out.println((N % H) * 10 + "" + ((N / H)+1));
+            if(N % H == 0)
+                System.out.println( (H*100) + N/H );
+            else
+                System.out.println((N % H) * 100 + ((N / H)+1));
         }
     }
 }
