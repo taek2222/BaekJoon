@@ -6,7 +6,6 @@ public class N1259 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-
         while(true) {
             String[] array = br.readLine().split("");
 
