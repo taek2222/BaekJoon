@@ -15,7 +15,6 @@ public class N2869 {
         int day = (V - A) / (A - B) + 1;
         if((V - A) % (A - B) != 0)
             day++;
-
         System.out.println(day);
     }
 }
