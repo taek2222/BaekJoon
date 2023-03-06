@@ -11,16 +11,21 @@ public class N11866 {
         ArrayList<Integer> number = new ArrayList<Integer>();
         StringTokenizer NK = new StringTokenizer(br.readLine());
         int max = Integer.parseInt(NK.nextToken());
-        int delete = Integer.parseInt(NK.nextToken());
+        int delete = Integer.parseInt(NK.nextToken()) - 1;
 
         for (int i = 1; i <= max; i++)
             number.add(i);
 
-        while(!((number.size()) == 1)) {
-            str.append(number.get(delete)).append(", ");
-            number.remove(delete);
+        for(int i = delete; number.size() > 1 ; i += delete) {
+            if( i >= number.size() )
+                i -= number.size();
+            if( i == number.size() )
+                i = 0;
+            str.append(number.get(i)).append(", ");
+            System.out.println(number.get(i));
+            number.remove(i);
         }
-
-        System.out.println(str);
+        str.append(number.get(0));
+        System.out.println("<"+str+">");
     }
 }
