@@ -16,8 +16,6 @@ public class N11866 {
         for (int i = 1; i <= max; i++)
             number.add(i);
         for(int i = delete ; number.size() > 1; ) {
-
-            System.out.println("현 i : " + i);
             str.append(number.get(i)).append(", ");
             number.remove(i);
 
