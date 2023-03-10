@@ -25,7 +25,6 @@ public class N1978 {
             if(check == 1)
                 decimal++;
         }
-
         System.out.print(decimal);
     }
 }
