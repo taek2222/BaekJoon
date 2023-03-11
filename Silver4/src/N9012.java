@@ -10,16 +10,13 @@ public class N9012 {
         int N = Integer.parseInt(br.readLine());
 
         for(int i = 0; i < N; i++) {
-            String strn = br.readLine();
-            String[] str = strn.split("");
+            String[] str = br.readLine().split("");
             int dis = 0;
             int check = 0;
 
             for (String s : str) {
-                if (s.equals("("))
-                    dis++;
-                else
-                    dis--;
+                if (s.equals("(")) dis++;
+                if (s.equals(")")) dis--;
 
                 if (dis < 0) {
                     print.append("NO\n");
@@ -30,9 +27,9 @@ public class N9012 {
             }
 
             if(check == 0 && dis == 0)
-                print.append("  YES\n");
-            else
-                print.append("  NO\n");
+                print.append("YES\n");
+            if(check == 0 && !(dis == 0))
+                print.append("NO\n");
         }
 
         System.out.print(print);
