@@ -9,16 +9,22 @@ public class N2164 {
         ArrayList<Integer> number = new ArrayList<>();
 
         int range = Integer.parseInt(br.readLine());
-        for(int i = 1; i <= range; i++)
-            number.add(i);
 
+        if(range % 2 == 0) {
+            for (int i = 2; i <= range; i += 2)
+                number.add(i);
+        }
+        else {
+            number.add(range);
+            for (int i = 2; i < range; i += 2)
+                number.add(i);
+        }
         System.out.println("생성 완료");
 
-        while(!(number.size() == 1)) {
-            number.remove(0);
-            number.add(number.get(0));
-            number.remove(0);
+        for (int i = 2; i < number.size(); i += 2) {
+            number.add(number.get(i-1));
         }
-        System.out.println(number.get(0));
+
+        System.out.println(number.get(number.size()-1));
     }
 }
