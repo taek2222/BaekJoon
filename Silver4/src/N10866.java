@@ -41,7 +41,6 @@ public class N10866 {
             array.remove(0);
         }
     }
-
     public static void pop_back(ArrayList<Integer> array) {
         if(array.size() == 0)
             System.out.println(-1);
@@ -50,11 +49,9 @@ public class N10866 {
             array.remove(array.size()-1);
         }
     }
-
     public static void size(ArrayList<Integer> array) {
         System.out.println(array.size());
     }
-
     public static void empty(ArrayList<Integer> array) {
         if(array.size() == 0)
             System.out.println(1);
