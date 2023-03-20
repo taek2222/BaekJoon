@@ -6,6 +6,7 @@ import java.util.StringTokenizer;
 
 public class N10816 {
     public static void main(String[] args) throws IOException {
+
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder print = new StringBuilder();
 
@@ -33,7 +34,7 @@ public class N10816 {
                 if(card[mid] > number)
                     last = mid;
                 else
-                    first = mid+1;
+                    //first = mid+1;
             }
             while(number == card[first]) {
                 first--; // 같은 수 최하 인덱스로 이동
