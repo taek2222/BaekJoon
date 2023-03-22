@@ -8,8 +8,8 @@ public class N4949 {
         StringBuilder bl = new StringBuilder();
 
         int number = 0;
-        while(true) {
-            String[] str = br.readLine().split("");
+        String[] str = br.readLine().split("");
+        while(!str[0].equals(".")) {
             int check = 0;
             int check1 = 0;
             for(int i = 0; i < str.length ; i++) {
@@ -22,12 +22,18 @@ public class N4949 {
                 if(str[i].equals("]"))
                     check1--;
                 if(check < 0 || check1 < 0) {
-                    bl.append("no");
+                    bl.append("no\n");
                     break;
+
                 }
+            }
+            if(check == 0 && check1 == 0) {
+                bl.append("yes\n");
             }
             number++;
 
+            str = br.readLine().split("");
         }
+        System.out.println(bl);
     }
 }
