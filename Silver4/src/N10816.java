@@ -21,6 +21,7 @@ public class N10816 {
         StringTokenizer num1 = new StringTokenizer(br.readLine());
 
         for(int i = 0; i < card2.length; i++)
+
             card2[i] = Integer.parseInt(num1.nextToken()); // M개의 카드 입력 완료.
 
         for(int i = 0; i < card2.length; i++) {
