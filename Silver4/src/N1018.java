@@ -38,14 +38,15 @@ public class N1018 {
     public static int CN(boolean[][] array, int N, int M) {
         int count = 0;
         for(int i = N; i < N+8; i++) {
-            for(int j = M; j < M+8; j++) {
-                if(array[i][j]) count++;
-                else count--;
+            boolean center = array[i][M];
+            for(int j = M+1; j < M+8; j++) {
+                if(center == array[i][j]) count++;
+                center = !center;
                 System.out.print(array[i][j] + " ");
             }
             System.out.println();
         }
-        System.out.println("지나감");
+        System.out.println("지나감" + count);
         return count;
     }
 }
