@@ -15,10 +15,7 @@ public class N1018 {
         for(int i = 0; i < N; i++) {
             String[] str = br.readLine().split("");
             for(int j = 0; j < M; j++) {
-                if(str[j].equals("W"))
-                    array[i][j] = true;
-                else
-                    array[i][j] = false;
+                array[i][j] = str[j].equals("W");
             }
         }
 
@@ -36,18 +33,18 @@ public class N1018 {
     }
 
     public static int CN(boolean[][] array, int N, int M) {
-        int count = 0;
+        int count_1 = 0;
+        int count_2 = 0;
+        boolean center = array[N][M];
         for(int i = N; i < N+8; i++) {
-            boolean center = array[i][M];
-            for(int j = M+1; j < M+8; j++) {
-                if(center == array[i][j]) count++;
+            for(int j = M; j < M+8; j++) {
+                if(center != array[i][j]) count_1++;
+                else count_2++;
                 center = !center;
-                System.out.print(array[i][j] + " ");
             }
-            System.out.println();
+            center = !center;
         }
-        System.out.println("지나감" + count);
-        return count;
+        return Math.min(count_1, count_2);
         
     }
 }
