@@ -48,5 +48,6 @@ public class N1018 {
         }
         System.out.println("지나감" + count);
         return count;
+        
     }
 }
