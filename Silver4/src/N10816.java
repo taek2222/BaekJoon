@@ -8,53 +8,53 @@ public class N10816 {
     public static void main(String[] args) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringBuilder print = new StringBuilder();
+        StringBuilder sb = new StringBuilder();
 
-        int[] card = new int[Integer.parseInt(br.readLine())];
-        StringTokenizer num = new StringTokenizer(br.readLine());
+        int N = Integer.parseInt(br.readLine()); // N 값 읽기
+        int[] card = new int[N];
+        StringTokenizer st = new StringTokenizer(br.readLine());
 
-        for(int i = 0; i < card.length; i++)
-            card[i] = Integer.parseInt(num.nextToken());
-        Arrays.sort(card); // N개의 카드 정렬 마침.
+        for (int i = 0; i < N; i++) // 상근이 숫자 카드 값 정렬 및 삽입
+            card[i] = Integer.parseInt(st.nextToken());
+        Arrays.sort(card);
 
-        int[] card2 = new int[Integer.parseInt(br.readLine())];
-        StringTokenizer num1 = new StringTokenizer(br.readLine());
+        int M = Integer.parseInt(br.readLine()); // M 값 읽기
+        st = new StringTokenizer(br.readLine());
 
-        for(int i = 0; i < card2.length; i++)
-
-            card2[i] = Integer.parseInt(num1.nextToken()); // M개의 카드 입력 완료.
-
-        for(int i = 0; i < card2.length; i++) {
-            int number = card2[i];
-            int first = 0;
-            int last = card.length;
-            while(first < last) {
-                int mid = (first + last) / 2;
-                if(card[mid] == number)
-                    break;
-                if(card[mid] > number)
-                    last = mid;
-                else
-                    first = mid+1;
-            }
-            while(number == card[first]) {
-                first--; // 같은 수 최하 인덱스로 이동
-                if(first < 0)
-                    break;
-            }
-            first++;
-
-            System.out.println(first + " 처음  first 값 ");
-            int count = 0;
-            while(number == card[first]) {
-                count++;
-                first++;
-                if(first == card.length)
-                    break;
-            }
-            System.out.println(first + " 마지막 first 값 ");
-            print.append(count).append(" ");
+        for(int i = 0; i < M; i++) {
+            int key = Integer.parseInt(st.nextToken());
+            sb.append(upperBound(card, key) - lowerBound(card, key)).append(' ');
         }
-        System.out.print(print);
+        System.out.println(sb);
+    }
+
+    public static int lowerBound(int[] arr, int key) {
+        int lo = 0;
+        int hi = arr.length;
+        while (lo < hi) {
+            int mid = (lo + hi) / 2;
+            if (key <= arr[mid]) {
+                hi = mid;
+            }
+            else {
+                lo = mid + 1;
+            }
+        }
+        return lo;
+    }
+
+    public static int upperBound(int[] arr, int key) {
+        int lo = 0;
+        int hi = arr.length;
+        while (lo < hi) {
+            int mid = (lo + hi) / 2;
+            if (key < arr[mid]) {
+                hi = mid;
+            }
+            else {
+                lo = mid + 1;
+            }
+        }
+        return lo;
     }
 }
