@@ -18,16 +18,14 @@ public class Main {
             total += K_array[i];
         }
 
-        int average = total / N;
-
-        for(; ;average--) {
-            int get = 0;
-            for(int j = 0; j < K_array.length; j++)
-                get += (K_array[j] / average);
-            if (get == N) {
-                System.out.println(average);
-                System.exit(0);
-            }
+        for(int average = 150; average < 250; average++) {
+            System.out.println(" == " + average + " == ");
+            System.out.print(total / average);
+            System.out.print(" 1." + K_array[0] % average);
+            System.out.print(" 2." + K_array[1] % average);
+            System.out.print(" 3." + K_array[2] % average);
+            System.out.print(" 4." + K_array[3] % average);
+            System.out.println(" nam : " + (K_array[0] % average) + (K_array[1] % average) + (K_array[2] % average) + (K_array[3] % average));
         }
     }
 }
