@@ -23,5 +23,18 @@ public class N2108 {
 
         System.out.println(number[(N-1)/2]); // 중앙값
 
+        int[] plus = new int[4000];
+        int[] subtract = new int[4000];
+        for(int i = 0; i < N; i++)
+            if(number[i] >= 0)
+                plus[number[i]]++;
+            else
+                subtract[Math.abs(number[i])]++;
+
+        for (int i = 0; i < 4000; i++) {
+            System.out.println("+" + plus[i] + "" + i);
+            System.out.println("-" + subtract[i] + "" + i);
+        }
+
     }
 }
