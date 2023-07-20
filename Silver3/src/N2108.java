@@ -45,7 +45,6 @@ public class N2108 {
             i += skip;
         }
 
-
         System.out.println((int)Math.round((double)Total / N)); // 산술 평균
         System.out.println(number[(N/2)]); // 중앙값
         System.out.println(mode);
